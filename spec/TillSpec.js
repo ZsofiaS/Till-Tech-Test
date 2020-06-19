@@ -33,4 +33,13 @@ describe('Till', function() {
       })
     })
   })
+  describe('#printReceipt', function() {
+    it('prints the receipt containing date & name of cafe & order', function() {
+      spyOn(Date, 'now').and.returnValue(1592574130802);
+      let till = new Till();
+      till.enterName("Zso");
+      till.order("Americano", 2);
+      expect(till.printReceipt()).toEqual(`${till.date}\nThe Coffee Connection\nAmericano 2x\n`)
+    })
+  })
 })
