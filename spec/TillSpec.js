@@ -11,6 +11,12 @@ describe('Till', function() {
     let till = new Till();
     expect(till.name).toEqual("");
   })
+  it('stores the date', function() {
+    spyOn(Date, 'now').and.returnValue(1592574130802);
+    let till = new Till();
+    till.order("Tiramisu", 2)
+    expect(till.date).toEqual("6/19/2020, 2:42:10 PM")
+  })
   describe('#enterName', function() {
     it('will store the customers name', function() {
       let till = new Till();
