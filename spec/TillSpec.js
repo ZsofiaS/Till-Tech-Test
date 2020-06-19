@@ -18,4 +18,13 @@ describe('Till', function() {
       expect(till.name).toEqual("Zso");
     })
   })
+  describe('#order', function() {
+    it('records a new line of order and saves it in items array', function() {
+      let till = new Till();
+      till.order("Tiramisu", 1);
+      expect(till.items).toContain({
+        "Tiramisu": 1
+      })
+    })
+  })
 })
