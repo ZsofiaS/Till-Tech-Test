@@ -39,7 +39,7 @@ describe('Till', function() {
       let till = new Till();
       till.enterName("Zso");
       till.order("Americano", 2);
-      expect(till.printReceipt()).toEqual(`${till.date}\nThe Coffee Connection\nAmericano 2x\n`)
+      expect(till.printReceipt()).toEqual(`${till.date}\nThe Coffee Connection\n\n123 Lakeside Way\n\nZso\nAmericano 2x\nThank you!`)
     })
   })
 })
