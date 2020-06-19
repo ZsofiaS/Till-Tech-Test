@@ -14,7 +14,7 @@ Implement a system that contains the business logic to produce receipts similar 
 Here are some sample orders you can try - whether you use this information is up to you:
 
 > Jane
-> 2 X Cafe Latte
+> 2 x Cafe Latte
 > 1 x Choc Mudcake
 >
 > John
