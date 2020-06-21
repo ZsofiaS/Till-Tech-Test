@@ -32,4 +32,37 @@ Your receipt must calculate and show the correct amount of tax (in this shop's c
 
 ## My approach
 
-I used Node, and Jasmine for testing.
+I used Node.js because I wanted to be able to read from the json file, and write into file, thus creating the receipt. I also used Jasmine for testing.  
+The program calculates correct line totals, tax and total.
+I used `fs` to write into file with Node.
+Currently I'm using 1 class, the Till class, and its functions: `enterName`, `order`, `printReceipt`, and private functions. This class has a little bit too much responsibility and I plan to use an additional class for creating new lines of items on the same order, and also refactor the `printReceipt` function.
+
+Some of the functionalities that need to be implemented:
+* using 2 fixed point notation for all amounts
+* format the phone number
+* format the date (however this may be a limitation in Node.js)
+* aligning the lines of items
+* extra: calculate discount
+* extra: calculate cash and change
+
+## How to use
+
+The tests can be run from the console:
+```
+cd tillTechTest2
+jasmine
+```
+
+The program can be used in the Node REPL, by typing into the console:
+```
+cd lib
+node
+.load Till.js
+```
+After this a new till can be created, customer name entered, order placed and the receipt printed, like so:
+
+![console screen](images/screen1.PNG)
+
+And the last command will produce a receipt in the `lib/receipt.txt` file, like this:
+
+![receipt](images/screen2.PNG)
