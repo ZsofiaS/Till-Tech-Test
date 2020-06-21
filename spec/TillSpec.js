@@ -38,8 +38,8 @@ describe('Till', function() {
       spyOn(Date, 'now').and.returnValue(1592574130802);
       let till = new Till();
       till.enterName("Zso");
-      till.order("Americano", 2);
-      expect(till.printReceipt()).toEqual(`${till.date}\nThe Coffee Connection\n\n123 Lakeside Way\n\nZso\nAmericano 2x\nThank you!`)
+      till.order("Americano", 1);
+      expect(till.printReceipt()).toEqual(`${till.date}\nThe Coffee Connection\n\n123 Lakeside Way\nPhone: 16503600708\n\nZso\n Americano 1 x 3.75\n\nTax: 0.324\n\nThank you!`)
     })
   })
 })
